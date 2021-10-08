@@ -1,9 +1,10 @@
+
 [package]
-name = "rust-ddd"
-version = "0.1.0"
 authors = ["Enrico Risa <enrico.risa@prima.it>"]
 edition = "2018"
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+name = "rust-ddd"
+version = "0.1.0"
+#efinitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+chrono = "*"
