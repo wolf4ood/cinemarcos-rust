@@ -48,6 +48,7 @@ pub enum RoomFeature {
     DDD,
 }
 // Entity
+
 pub struct ScreeningID(u32);
 pub struct ScreeningSchedule {
     id: ScreeningID,
@@ -64,12 +65,6 @@ impl ScreeningSchedule {
 pub struct CustomerId(u32);
 
 pub type SeatLocation = (u32, u32);
-
-pub struct ReserveSeatsCommand {
-    screening_id: ScreeningID,
-    customer_id: CustomerId,
-    seats: Vec<SeatLocation>,
-}
 
 pub struct Customers {
     customers: Vec<CustomerId>,
@@ -99,6 +94,12 @@ impl Screenings {
     pub fn store(&self, screening_schedule: ScreeningSchedule) {
         todo!()
     }
+}
+
+pub struct ReserveSeatsCommand {
+    screening_id: ScreeningID,
+    customer_id: CustomerId,
+    seats: Vec<SeatLocation>,
 }
 pub struct CommandHandler {
     customers: Customers,
